@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).mousemove(function(event){
+				event = event || window.event; 
+				console.log(event); 
+				document.querySelector('.x').innerHTML = event.offsetX;
+				document.querySelector('.y').innerHTML = event.offsetY;})</script>
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Задание 4. Координаты</h1>
+		<div class="coords">
+			X: <span class="x"></span><br>
+			Y: <span class="y"></span>
+		</div>
+</body>
+</html>

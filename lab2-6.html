@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+	<style>
+
+	#drag {
+		font-size: 48px; 
+		color: #000;
+		box-shadow: -2px 2px 5px #000;
+		border: 3px solid #000;
+        width: 400px; 
+		text-align: center;
+	}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#drag').mousemove(function(event) {
+				$('#drag').draggable();
+			});
+		});
+		</script>
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Задание 5. Эффект перетаскивания</h1>
+<div id="drag">
+	возьми и перетащи
+</div>
+</body>
+</html>

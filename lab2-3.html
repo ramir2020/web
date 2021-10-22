@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b").click(function(){
+				var name = document.getElementById("name");
+				var inp1 = document.getElementById("pas1");
+				var inp2 = document.getElementById("pas2");
+				var email = document.getElementById("email");
+				var  mess=document.getElementById("mess");
+				if (name.value ==""){
+					alert("поле имени не заполнено")
+					document.getElementById('name').style.borderColor="red"}
+				else {
+					document.getElementById('name').style.borderColor="black";
+				}
+				if (inp1.value.length<4){
+					alert("в пароле меньше 4 символов")
+					document.getElementById('pas1').style.borderColor="red"}
+				else {
+					document.getElementById('pas1').style.borderColor="black";
+				}
+				if (inp1.value!=inp2.value){
+				alert("пароль и подтверждение не совпадают");
+				inp1.value = "";
+				inp2.value = "";
+				document.getElementById('pas1').style.borderColor="red"
+				document.getElementById('pas2').style.borderColor="red"}
+				else {
+					document.getElementById('pas1').style.borderColor="black";
+					document.getElementById('pas2').style.borderColor="black";
+				}
+				if (email.value==""){
+				alert("не введен Email")
+				document.getElementById('email').style.borderColor="red"}
+				else {
+					document.getElementById('email').style.borderColor="black";
+				}
+			if (email.value.indexOf("@")==-1) {
+				alert("Email не содержит символ \"@\".");
+				document.getElementById('email').style.borderColor="red"}
+				else {
+					document.getElementById('email').style.borderColor="black";
+				}
+			if (mess.value.length<11){
+				alert("слишком маленький объем сообщения, должно быть минимум 10 символов")
+				document.getElementById('mess').style.borderColor="red"}
+				else {
+					document.getElementById('mess').style.borderColor="black";
+				}
+			})
+		})
+	</script>	
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Задание 2. Форма</h1>
+<p style="color: red;">* - обязательные для заполнения поля</p>
+<form name="forme" onsubmit="return validate()" style="border: 3px solid #000; width: 400px;">
+	<p>Ваше имя* <input type="name" id="name" size=32 required></p>			
+	<p>Пароль* <input type="text" id="pas1" size=35 required></p>			
+	<p>Потверждение пароля* <input type="text" id="pas2" size=20 required></p>		
+	<p>EMAIL* <input type="email" id="email" size=35 required></p>	
+	<p>Тема сообщения: <input type="text" size=26 required></p>		
+	<p>Сообщение: <input type="text" id="mess" size=31 required></p><br>		
+	<input type="button" value="Отправить" id="b"><input type="reset" value="Очистить">
+</body>
+</html>

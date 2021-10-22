@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+
+	<script type="text/javascript" src="jquery.js"></script>	
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Задание 3. Движение картинки</h1>
+<button class="btn-slide" id="right">Вправо</button>
+		<button class="btn-slide" id="left">Влево</button>
+		<button class="btn-slide" id="down">Вниз</button>
+		<button class="btn-slide" id="up">Вверх</button><br>
+		<span id="img" style="position: absolute;"> <img src="https://im0-tub-ru.yandex.net/i?id=a7fe75d83a7cbff3a6e5507c6e2b7d81-l&ref=rim&n=13&w=640&h=640" style="width: 300px; "></span><br>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#right").click(function() {
+					$("#img").animate({left:"+=100"})})
+				$("#left").click(function() {
+					$("#img").animate({left:"-=100"})})
+				$("#down").click(function() {
+					$("#img").animate({top: "+=100"})})
+				$("#up").click(function() {
+					$("#img").animate({top: "-=100"})})})
+	</script>
+</body>
+</html>

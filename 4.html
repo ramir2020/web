@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="jquery-ui.js"></script>
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Лабораторная работа №4</h1>
+<h4>Плагины jQuery. Работа с библиотекой jQuery UI</h4>
+<h4>Вариант 3 - афиша мероприятий</h4>
+<div class="dia" title="Подтвердите свой выбор">Все заполнено верно?</div>
+			  <div class="yes" title="Спасибо за покупку!">Покупайте билеты еще!</div>
+			
+			<h3>Концертные площадки г.Уфы:</h3>
+			<span id="accordion">
+				<h3>Тинькофф Холл</h3> <div>
+				<p>Тинькофф Холл имеет мегазал «Колизео», «Клуб 11», рестораны Браухаус» и «Веранда», караоке-залы «Монро» и «Мафия»!
+				</div> 
+				<h3>Ресторан «Максимилианс»</h3> <div>
+				<p>Уфимский «Максимилианс» — часть сети клубных ресторанов, работающих в крупных городах России и заслуживших хорошую репутацию и любовь публики.<br>
+					Что отличает хороший ресторан? Стильный интерьер, умеющая веселиться публика и, конечно, вкусная и аппетитная еда и фирменный напиток!<br>
+					Ну и, конечно же, незабываемые концертные вечера!
+			  </p>
+				</div> 
+				<h3>MusicHall27</h3> <div>
+				<p>MusicHall27 - музыкальный ресторан в центре города. <br>
+					Музыка и гастрономия – две наших страсти, которыми мы готовы поделиться с каждым. Кто-то назовёт нашу кухню современной европейской и будет прав. Но не совсем. Слишком сухое определение для дела всей нашей жизни. <br> Команда #kitchen27 следит за гастротрендами, находит вдохновение в путешествиях и каждый сезон прыгает выше головы. Просто попробуйте!  </div> 
+				</span><br>
+				<h3>Афиша мероприятий:</h3>
+				<div id="tabs" style="width: 40%;"> <ul> 
+					<li><a href="#tabs-1">Валерий Меладзе</a></li> 
+					<li><a href="#tabs-2">Макс Барских</a></li> 
+					<li><a href="#tabs-3">Mary Gu</a></li> </ul> 
+					<div id="tabs-1" > <h2>Валерий Меладзе 4.11.2021</h2> 
+					  <img src="https://cdn.kassir.ru/ufa/poster/d4/d4bc819baae6c7f2fc0dd9e1aaf17c8a.jpg" alt="" style=" width: 50%;">
+					  <p>MusicHall27 представляет<br>
+						<span style="font-weight: bold;">Валерий Меладзе</span> со своими хитами!<br>
+						<p>Цена: 4000р</p><br>
+						<button id="btn1">купить билет</button></p> 
+					  </div>
+					  <div id="tabs-2" > <h2>Макс Барских 2.05.2022</h2> 
+						<img src="https://cdn.kassir.ru/kassir.ru/poster/e8/e88f7eaed1b952771e5fab88c156597d.jpg" alt="" style=" width: 50%;">
+						<p>Тинькофф Холл представляет<br>
+						 <span style="font-weight: bold;">Макс Барских</span> со своей новой программой!<br>
+						  <p>Цена: 2500р</p><br>
+						  <button id="btn2">купить билет</button></p> 
+						</div> 
+						<div id="tabs-3" > <h2>Mary Gu 5.11.2021</h2> 
+							<img src="https://cdn.kassir.ru/ufa/poster/40/40cd195bc9dd34db4fb890abaeef2f6f.jpeg" alt="" style=" width: 50%;">
+							<p>«Максимилианс» представляет<br>
+							 Концерт невероятной<span style="font-weight: bold;">Mary Gu</span> со своей красивой лирической программой в Уфе!<br>
+							  <p>Цена: 2500р</p><br>
+							  <button id="btn3">купить билет</button></p> 
+							</div>
+							<div id="dialog1" title="Купить билет на концерт Валерий Меладзе">
+								<form action="">
+								  ФИО: <input type="text"><br><br>
+								  Дата рождения:  <input type="text"  class="date"><br><br>
+								 Номер столика: <input type="text"  class="stol"><br><br>
+								  Количество билетов: <p style="display: inline;" id="sliderValue1"></p>
+								  <br><br>
+								  <div id="slider1" style="width: 100%;"></div> <br>
+								  email:  <input type="text"  class="date"><br><br>
+								  Промокод: <input type="text"><br><br>
+								 Сумма: <input type="text"id="price1" title="Нажмите и программа выведет сумму за билет (-ы)" ><br><br>
+								</form>
+								<input type="button" class="puy" value="Купить">
+							  </div>
+							  <div id="dialog2" title="Купить билет на концерт Макс Барских">
+								<form action="">
+								  ФИО: <input type="text"><br><br>
+								  Дата рождения:  <input type="text"  class="date"><br><br>
+								  Номер столика: <input type="text"  class="stol"><br><br>
+								  Количество билетов: <p style="display: inline;" id="sliderValue2"></p>
+								  <br><br>
+								  <div id="slider2" style="width: 100%;"></div> <br>
+								  email:  <input type="text"  class="date"><br><br>
+								  Промокод: <input type="text"><br><br>
+								 Сумма: <input type="text"id="price2" title="Нажмите и программа выведет сумму за билет (-ы)" ><br><br>
+								</form>
+								<input type="button" class="puy" value="Купить">
+							  </div>
+							  <div id="dialog3" title="Купить билет на концерт Mary Gu">
+								<form action="">
+								  ФИО: <input type="text"><br><br>
+								  Дата рождения:  <input type="text"  class="date"><br><br>
+								  Номер столика: <input type="text"  class="stol"><br><br>
+								  Количество билетов: <p style="display: inline;" id="sliderValue3"></p>
+								  <br><br>
+								  <div id="slider3" style="width: 100%;"></div> <br>
+								  email:  <input type="text"  class="date"><br><br>
+								  Промокод: <input type="text"><br><br>
+								 Сумма: <input type="text"id="price3" title="Нажмите и программа выведет сумму за билет (-ы)" ><br><br>
+								</form>
+								<input type="button" class="puy" value="Купить">
+							  </div>
+	  <script type="text/javascript">
+		$(function(){
+		  $( function() {
+	$( document ).tooltip();
+  } );
+$("#accordion" ).accordion({  collapsible: true });  
+	  $('#tabs').tabs(); 
+	  $('#dialog1').dialog({ autoOpen: false, width: 600 });
+  $('#dialog2').dialog({ autoOpen: false, width: 600 });
+  $('#dialog3').dialog({ autoOpen: false, width: 600 });
+  $("#btn1").click(function(){ 
+	$( "#dialog1" ).dialog('open'); 
+  })
+  $("#btn2").click(function(){ 
+	$( "#dialog2" ).dialog('open'); 
+  })
+  $("#btn3").click(function(){ 
+	$( "#dialog3" ).dialog('open'); 
+  })
+  $('#slider1').slider({
+		min: 1,
+		max: 10,
+	change: function (event, ui){
+		var val = $('#slider1').slider('value');
+		$('#sliderValue1').html(val);
+	}
+});
+$('#slider2').slider({
+		min: 1,
+		max: 10,
+	change: function (event, ui){
+		var val = $('#slider2').slider('value');
+		$('#sliderValue2').html(val);
+	}
+});
+$('#slider3').slider({
+		min: 1,
+		max: 10,
+	change: function (event, ui){
+		var val = $('#slider3').slider('value');
+		$('#sliderValue3').html(val);
+	}
+});
+$.datepicker.regional['ru'] = {
+closeText: 'Закрыть',
+prevText: 'Предыдущий',
+nextText: 'Следующий',
+currentText: 'Сегодня',
+monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+weekHeader: 'Не',
+dateFormat: 'dd.mm.yy',
+firstDay: 1,
+isRTL: false,
+showMonthAfterYear: false,
+yearSuffix: ''
+};
+$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+	  $(".date").datepicker({ });
+	  var stol = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]; 
+  $(".stol" ).click(function(){
+	$(".stol").autocomplete({ source: stol });
+});
+$(".puy" ).click(function(){
+	$('.dia').dialog('open'); })
+$('.dia').dialog({ autoOpen: false, width: 300, buttons:{
+	"да": function(){ $( ".yes" ).dialog('open'),$('.dia').dialog('close');   }
+}})
+$( ".yes" ).dialog({autoOpen: false, width: 300});
+$("#price1" ).click(function(){
+var k = $('#slider1').slider('value');
+var price = 4000*k;
+document.getElementById('price1').value = price;
+})
+$("#price2" ).click(function(){
+var k = $('#slider2').slider('value');
+var price = 2300*k;
+document.getElementById('price2').value = price;
+})
+$("#price3" ).click(function(){
+var k = $('#slider3').slider('value');
+var price = 2500*k;
+document.getElementById('price3').value = price;
+})
+
+
+} )
+
+		 </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<script>
+window.addEventListener("load",function() {
+var request = new XMLHttpRequest();
+request.open('GET','1.php',true);
+request.addEventListener('readystatechange', function() {
+if ((request.readyState==4) && (request.status==200)) {
+var welcome = document.getElementById('insert');
+welcome.innerHTML = request.responseText;}});
+request.send();
+});
+function func(str) {alert("Ваш отзыв отправлен");
+if (str.length==0) {document.getElementById("insert").innerHTML="";
+return;}
+if (window.XMLHttpRequest) {xmlhttp=new XMLHttpRequest();
+} else { 
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+xmlhttp.onreadystatechange=function() {
+if (this.readyState==4 && this.status==200) {
+document.getElementById("insert").innerHTML=this.responseText;}}
+var nam = document.getElementById("name").value, email = document.getElementById("email").value, txt=document.getElementById("txt").value;
+var variables ="nam="+nam+"&email="+email+"&txt="+txt;
+xmlhttp.open("GET","2.php?"+variables,true);
+xmlhttp.send();}
+</script>
+<h3>ИГРА В КАЛЬМАРА</h3>
+<img src="https://upload.wikimedia.org/wikipedia/ru/d/dd/Squid_Game.jpg" alt="" style="width: 20%;">
+<br>
+<h4>Оставьте отзыв на один из самых нашумевших сериалов последнего месяца - "ИГРА В КАЛЬМАРА"</h4>
+<form method="GET">
+	<p class="text">Имя: <input type="text" name="name" id="name"/></p>
+	<p class="text">email: <input type="text" name="email" id="email"/></p>
+	<p class="text">Отзыв: <input type="text" name="txt" id="txt"/></p>
+	<input onclick = "func(this.value)" type="button" id="btn" value="Отправить" />
+</form>
+<span id = "insert"></span>
+</body>
+</html>

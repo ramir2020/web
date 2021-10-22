@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h3>Актер Алек Болдуин застрелил оператора и ранил режиссера на съемках.</h3>
+<p>Что известно о трагедии?</p>
+<img src="https://icdn.lenta.ru/images/2021/10/22/09/20211022093600062/feature_03f5fd77a1bc20fa3cc86171480da633.jpg" alt=""><br>
+<br>
+<h3>Путин объявил о нерабочих днях с 30 октября по 7 ноября.</h3>
+<p>Выходные из-за COVID-19 могут быть продлены</p>
+<img src="https://icdn.lenta.ru/images/2021/10/20/12/20211020120814969/top7_0927ed3d4c8a60ea1829798384fbf32b.jpg" alt=""><br>
+<br>
+<h3>На вес золота</h3>
+<p>Сколько на самом деле стоят продукты в супермаркетах России, Европы и остального мира? Исследование</p>
+<img src="https://icdn.lenta.ru/images/2021/03/09/16/20210309161709938/top7_3572521eb59db9721c009f0ab1bf0dcf.jpg" alt=""><br>
+<br>
+<h3>Популярный препарат оказался бесполезен против COVID-19.</h3>
+<p>Осложнения и побочные эффекты: к каким выводам пришли ученые?</p>
+<img src="https://icdn.lenta.ru/images/2021/10/20/14/20211020141324905/top7_3a224eef71828e790fb6af41862cab0b.jpg" alt=""><br>
+<br> 
+<h3>Достучаться до небес</h3>
+<p>10 самых необычных небоскребов будущего. Где их построят?</p>
+<img src="https://icdn.lenta.ru/images/2021/03/04/22/20210304222430878/top7_4a8005cae2257d7fb8102db408487183.jpg" alt=""><br>
+<br> 
+</div>
+<script type="text/javascript">
+	let tek = 5;
+			function fff(str) {
+				if (str.length==0) {
+    document.getElementById("ffff").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+
+    xmlhttp=new XMLHttpRequest();
+  } else { 
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("ffff").innerHTML=this.responseText;
+    }
+  }
+			   xmlhttp.open("GET","ajax.items.php?tek="+tek,true);
+			   xmlhttp.send();
+			   tek+=5;
+			}
+		 </script>
+	<span id = "ffff"></span>
+	<form>
+		<input onclick = "fff(this.value)" type="button" value="Еще новости" id="b">
+	</form>
+</body>
+</html>

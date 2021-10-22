@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+	<style>
+	#result , tr,td{
+		padding: 20px;
+	}
+	</style>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="jquery-ui.js"></script>
+	<script src="jquery.myPlugin.js"></script>
+</head>
+    <body>
+        <h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Лабораторная работа №5</h1>
+<h4>Разработка плагина на Javascript и jQuery</h4>
+<h4>Игра Камень-Ножницы-Бумага</h4>
+    <h1>Сделайте свой выбор</h1>
+    <img src="rock.png" width="100px" name="rock" id = "rock"/>
+    <img src="n.png" name="paper" id = "paper"/>
+    <img src="b.png" name="scissors" id = "scissors"/>
+	<div id="start" title="Начать игру">Нажимайте на изображения камня, ножниц или бумаги, дожидайтесь результата от компьютера. Удачи!
+   </div>
+    <h1>Результаты битвы:</h1>
+    <script language=javascript>  
+		$( "#start" ).dialog({width: 500, buttons:{
+        "Играть!": function() { $('#start').myPlugin('start'); $( "#start" ).dialog('close')}}});
+    </script>
+    <table id="result" border="3">
+        <tr>
+            <td>Выбор компьютера</td>
+            <td>Ваш выбор</td>
+            <td>Результат</td>
+        </tr>   
+    </table>
+    </body>
+    </html>

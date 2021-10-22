@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шакиров</title> 
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var s;
+			var k1,k2,k3,k4,k5;
+			s=0;
+			k1=0;
+			k2=0;
+			k3=0;
+			k4=0;
+			k5=0;
+			$("#b").click(function(){
+				s+=1;
+				var que = document.getElementsByName('q');
+				for (var i = 0; i < que.length; i++) {
+        			if (que[i].checked) {
+            			if (i==0){
+							k1+=1
+							res1=k1*100/s;
+							alert(res1+"% людей тоже любят Одноклассники")
+							break
+						}
+						if (i==1){
+							k2+=1
+							res2=k2*100/s;
+							alert(res2+"% людей поддерживают ВКонтакте")
+							break
+						}
+						if (i==2){
+							k3+=1
+							res3=k3*100/s;
+							alert(res3+"% людей предпочитают проводить свое свободное время с ТикТоком")
+							break
+						}
+						if (i==3){
+							k4+=1
+							res4=k4*100/s;
+							alert(res4+"% ответивших, как и вы, любят постить фоточки в инст")
+							break
+						}
+						if (i==4){
+							k5+=1
+							res5=k5*100/s;
+							alert(res5+"% людей любят писать короткие сообщения в Тви")
+							break
+						}
+        		} 
+		}})})
+	</script>
+</head>
+<body>
+	<h4>Шакиров Рамир Инфирович, ПИ-419</h4>
+<h1>Задание 6. Опрос</h1>
+<form name="quiz" action="javascript:check();" class="quizform">
+	<div class="quizsection">
+		<h2>Вопрос</h2>
+		<p>Ваша любимая соц.сеть?</p>
+		<div class="answer">
+			<input name="q" value="value1" id="value1" type="radio"/>Одноклассники 
+		</div>
+		<div class="answer">
+			<input name="q" value="value1" id="value2" type="radio" />ВКонтакте
+		</div>
+		<div class="answer">
+			<input name="q" value="value2" id="value3" type="radio" />ТикТок 
+		</div> 
+		<div class="answer">
+			<input name="q" value="value1" id="value4" type="radio" />Instagram 
+		</div> 
+		<div class="answer">
+			<input name="q" value="value1" id="value5" type="radio" />Твиттер
+		</div>
+	</div> 
+	<br>
+	<input type="button" value="проверить" id="b">
+	</form>
+</body>
+</html>
